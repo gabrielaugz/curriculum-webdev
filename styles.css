@@ -1,0 +1,208 @@
+:root {
+    --color-primary: #2c3e50;
+    --color-secondary: #3498db;
+    --color-accent: #2ecc71;
+    --bg-body: #ffffff;
+    --text-body: #2c3e50;
+    --bg-card: #f8f9fa;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+    --color-primary: #ecf0f1;
+    --color-secondary: #2ecc71;
+    --bg-body: #2c3e50;
+    --text-body: #ecf0f1;
+    --bg-card: #34495e;
+    --shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Layout Container */
+.curriculum {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Header Styles */
+.curriculum__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.curriculum__header h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Block */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-body);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.contact-info__link:hover {
+    opacity: 0.8;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links__item {
+    color: var(--text-body);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links__item:hover {
+    color: var(--color-secondary);
+}
+
+/* Section Styles */
+.curriculum__section {
+    margin-bottom: 3rem;
+}
+
+.section__title {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Content Card */
+.content-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.content-card__title {
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.content-card__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Project List */
+.project-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.project-list__item {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.project-list__item::before {
+    content: "▹";
+    position: absolute;
+    left: -1.5rem;
+    color: var(--color-secondary);
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 100;
+}
+
+.theme-switcher__control {
+    display: none;
+}
+
+.theme-switcher__label {
+    display: block;
+    position: relative;
+    width: 3.75rem;
+    height: 1.875rem;
+    background: var(--bg-card);
+    border-radius: 6.25rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.theme-switcher__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.875rem;
+}
+
+.theme-switcher__icon--sun { left: 0.5rem; color: #f1c40f; }
+.theme-switcher__icon--moon { right: 0.5rem; color: #ecf0f1; }
+
+.theme-switcher__ball {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.theme-switcher__control:checked + .theme-switcher__label .theme-switcher__ball {
+    transform: translateX(1.875rem);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .curriculum {
+        padding: 1rem;
+    }
+    
+    .curriculum__header h1 {
+        font-size: 2rem;
+    }
+    
+    .content-card__meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

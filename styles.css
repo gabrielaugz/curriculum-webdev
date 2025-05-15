@@ -186,7 +186,6 @@ body {
     transform: translateX(1.875rem);
 }
 
-<<<<<<< HEAD
 .back-to-top {
   position: fixed;
   bottom: 1.5rem;
@@ -294,8 +293,6 @@ form#contact-form button:hover {
 }
 
 
-=======
->>>>>>> 1c538e491fcfb49fc95e4192d36268005e4001db
 /* Responsive */
 @media (max-width: 768px) {
     .curriculum {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gabriel Augusto – Currículo</title>
@@ -93,6 +94,72 @@
         </ul>
       </article>
     </section>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Augusto - Currículo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switcher">
+        <input type="checkbox" id="theme-switch" class="theme-switcher__control">
+        <label for="theme-switch" class="theme-switcher__label">
+            <i class="fas fa-sun theme-switcher__icon theme-switcher__icon--sun"></i>
+            <i class="fas fa-moon theme-switcher__icon theme-switcher__icon--moon"></i>
+            <span class="theme-switcher__ball"></span>
+        </label>
+    </div>
+
+    <main class="curriculum">
+        <header class="curriculum__header">
+            <h1 class="curriculum__title">Gabriel Augusto Leite Souza de Castro</h1>
+            <div class="contact-info">
+                <a href="mailto:gabrielgust22@gmail.com" class="contact-info__link">
+                    <i class="fas fa-envelope"></i>
+                    gabrielgust22@gmail.com
+                </a>
+                <a href="tel:+5513991530671" class="contact-info__link">
+                    <i class="fas fa-phone"></i>
+                    +55 (13) 99153-0671
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com/gabrielaugz" target="_blank" class="social-links__item">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/gabriel-a-8667a0238/" target="_blank" class="social-links__item">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="curriculum__section">
+            <h2 class="section__title"><i class="fas fa-user-graduate"></i> Formação Acadêmica</h2>
+            <article class="content-card">
+                <h3 class="content-card__title">Ciência da Computação</h3>
+                <div class="content-card__meta">
+                    <span class="content-card__organization">UNIVERSIDADE DE SÃO PAULO (USP), RIBEIRÃO PRETO</span>
+                    <time class="content-card__date">02/2022 - 12/2025</time>
+                </div>
+            </article>
+        </section>
+
+        <section class="curriculum__section">
+            <h2 class="section__title"><i class="fas fa-laptop-code"></i> Habilidades</h2>
+            <article class="content-card content-card--grid">
+                <ul class="skill-list">
+                    <li class="skill-list__item">Capacidade de planejar e organizar para cumprir prazos</li>
+                    <li class="skill-list__item">Habilidades interpessoais para trabalho em equipe</li>
+                    <li class="skill-list__item">Gestão de múltiplas tarefas</li>
+                    <li class="skill-list__item">Java, Python, C++</li>
+                    <li class="skill-list__item">HTML, CSS, JavaScript</li>
+                    <li class="skill-list__item">MySQL (Banco de Dados relacionais)</li>
+                    <li class="skill-list__item">Git/GitHub</li>
+                </ul>
+            </article>
+        </section>
+>>>>>>> 1c538e491fcfb49fc95e4192d36268005e4001db
 
         <section class="curriculum__section">
             <h2 class="section__title"><i class="fas fa-language"></i> Idiomas</h2>
@@ -167,6 +234,7 @@
                 </ul>
             </article>
         </section>
+<<<<<<< HEAD
 
     <section class="curriculum__section">
       <h2 class="section__title">
@@ -198,5 +266,15 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
   <script src="script.js"></script>
+=======
+    </main>
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+>>>>>>> 1c538e491fcfb49fc95e4192d36268005e4001db
 </body>
 </html>
